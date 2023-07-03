@@ -1,0 +1,46 @@
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir QA
+3) Зайти в папку - cd QA
+4) Создать 3 папки - mkdir cats family hobbies
+5) Зайти в любоую папку - cd cats
+6) Создать 5 файлов (3 txt, 2 json) - touch kitler.txt yumiko.txt gosha.txt dina.json belchik.json
+7) Создать 3 папки - mkdir white black red
+8. Вывести список содержимого папки - ls -1
+9) + Открыть любой txt файл - cat yumiko.txt
+10) + написать туда что-нибудь, любой текст. - cat > yumiko.txt
+1) black
+2) white
+3) fat
+4) shy
+5) myau
+
+11) + сохранить и выйти. - ctrl+d
+12) Выйти из папки на уровень выше — cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку - mv gosha1.txt /c/Users/user/QA1/family1/
+mv dina1.json /c/Users/user/QA1/family1/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку - cp cats/kika.txt hobbies/kitler.txt cp family/dina.json hobbies/dina.json
+15) Найти файл по имени - find /c/users/user/qa/ -name yumiko.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - grep black yumiko.txt
+17) вывести несколько первых строк из текстового файла - grep -rn "fat\|shy\|black"
+18) вывести несколько последних строк из текстового файла - tail -n 2 yumiko.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less yumiko.txt
+20) вывести дату и время - date
+
+**********
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5006/terminal-hw-request
+
+curl http://162.55.220.72:5005/get_method?name=Xena\&age=25
+ 
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+cd /c/Users/User/QA1
+mkdir cats1 family1 hobbie1
+cd cats1
+touch kika1.txt yumiko1.txt gosha1.txt dina1.json belchik1.json
+mkdir white1 black1 red1
+ls -1
+mv gosha1.txt /c/Users/user/QA1/family1/
+mv dina1.json /c/Users/user/QA1/family1/
